@@ -23,7 +23,7 @@ public class ExcelService {
 
     private String filePath = "C:\\Users\\ragul\\Downloads\\ExcelSheet.xlsx";
 
-    @Scheduled(fixedRate = 1000) // Broadcast updates every 5000 ms
+    @Scheduled(fixedRate = 1000) // Broadcast updates every 1000 ms
     public void updateClients() {
         List<String[]> newData = getData();
         broadcastSheetData(newData);
