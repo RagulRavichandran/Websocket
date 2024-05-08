@@ -22,7 +22,7 @@ public class ExcelController {
     @GetMapping("/getData")
     public ResponseEntity<List<String[]>> getExcelData() {
         List<String[]> data = excelService.getData();
-        return ResponseEntity.ok(data);
+        return ResponseEntity.ofNullable(data);
     }
 
     @MessageMapping("/hello")
